@@ -148,7 +148,7 @@ div#alumni {
     div#alumni div#bg-col1 {
       top: 0px; left: 0px;
       height: 100%; width: 100%;
-      background-image: url("file:///Users/kkasparek/Desktop/Projects/ProspectsNationalTeam/images/ncaalogo.jpeg");
+      background-image: url("images/ncaalogo.jpeg");
       background-repeat: no-repeat;
       background-size: 90% 90%;
       background-position: center;
@@ -159,7 +159,7 @@ div#alumni {
     div#alumni div#col1 div#stats-col1:hover {
       top: 0px; left: 0px;
       height: 100%; width: 100%;
-      background-image: url("file:///Users/kkasparek/Desktop/Projects/ProspectsNationalTeam/images/ncaalogo.jpeg");
+      background-image: url("images/ncaalogo.jpeg");
       background-repeat: no-repeat;
       background-size: 100%;
       position: absolute;
@@ -183,7 +183,7 @@ div#alumni {
       div#alumni div#bg-col2 {
         top: 0px; left: 0px;
         height: 100%; width: 100%;
-        background-image: url("file:///Users/kkasparek/Desktop/Projects/ProspectsNationalTeam/images/mlb-draft-logo.jpeg");
+        background-image: url("images/mlb-draft-logo.jpeg");
         background-repeat: no-repeat;
         background-size: 90% 90%;
         background-position: center;
@@ -194,7 +194,7 @@ div#alumni {
       div#alumni div#col2 div#stats-col2:hover {
         top: 0px; left: 0px;
         height: 100%; width: 100%;
-        background-image: url("file:///Users/kkasparek/Desktop/Projects/ProspectsNationalTeam/images/mlb-draft-logo.jpeg");
+        background-image: url("images/mlb-draft-logo.jpeg");
         background-repeat: no-repeat;
         background-size: 100%;
         position: absolute;
@@ -218,7 +218,7 @@ div#alumni {
       div#alumni div#bg-col3 {
         top: 0px; left: 0px;
         height: 100%; width: 100%;
-        background-image: url("file:///Users/kkasparek/Desktop/Projects/ProspectsNationalTeam/images/mlb-logo.jpeg");
+        background-image: url("images/mlb-logo.jpeg");
         background-repeat: no-repeat;
         background-size: 90% 90%;
         background-position: center;
@@ -229,7 +229,7 @@ div#alumni {
       div#alumni div#col3 div#stats-col3:hover {
         top: 0px; left: 0px;
         height: 100%; width: 100%;
-        background-image: url("file:///Users/kkasparek/Desktop/Projects/ProspectsNationalTeam/images/mlb-logo.jpeg");
+        background-image: url("images/mlb-logo.jpeg");
         background-repeat: no-repeat;
         background-size: 98%;
         position: absolute;
