@@ -16,7 +16,7 @@ div#header {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  background: url("file:///Users/kkasparek/Desktop/Projects/ProspectsNationalTeam/images/onfieldbp.jpg") no-repeat;
+  background: url("images/onfieldbp.jpg") no-repeat;
   background-position: center;
   background-size: cover;
   }
@@ -30,7 +30,7 @@ div#header {
     z-index: 10;
   }
   ul#nav-links {
-    background: url("file:///Users/kkasparek/Desktop/Projects/ProspectsNationalTeam/images/pnt-logo.jpg") no-repeat;
+    background: url("images/pnt-logo.jpg") no-repeat;
     background-color: white;
     height: 52px;
     list-style-type: none;
