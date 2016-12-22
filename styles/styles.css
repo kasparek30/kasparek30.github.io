@@ -1,0 +1,83 @@
+* {
+margin: 0 auto;
+padding: 0;
+font-family: Helvetica, sans-serif;
+}
+
+body {
+  background: url("file:///users/kkasparek/Desktop/Projects/DonsRepairShop/kasparek30.github.io/images/stock-auto-shop.png");
+  margin: 0 auto;
+}
+
+div#page-wrap {
+
+}
+
+header.small {
+  position: fixed;
+  overflow: hidden;
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  color: black;
+  -moz-box-shadow: 0 0 10px #000000;
+  -webkit-box-shadow: 0 0 10px #000000;
+  box-shadow: 0 0 10px #000000;
+  z-index: 10;
+
+  }
+  header.small img {
+    margin-top: -87.5px;
+    width: 225px;
+  }
+
+header.large {
+  position: fixed;
+  overflow: hidden;
+  height: 175px;
+  width: 100%;
+  background-color: white;
+  color: black;
+  -moz-box-shadow: 0 0 10px #000000;
+  -webkit-box-shadow: 0 0 10px #000000;
+  box-shadow: 0 0 10px #000000;
+  z-index: 10;
+
+  }
+  header.large img {
+    margin-top: -25px;
+    width: 225px;
+  }
+
+  header p {
+    text-align: center;
+    margin-top: -125px;
+    padding-left: 225px
+  }
+
+header, img {
+  transition: all .2s;
+  -moz-transition: all .2s; /* Firefox 4 */
+  -webkit-transition: all .2s; /* Safari and Chrome */
+  -o-transition: all .2s; /* Opera */
+}
+
+div#header {
+  overflow: hidden;
+  text-align: center;
+  }
+  div#header img {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 55px;
+    padding-bottom: 5%;
+    z-index: -9;
+  }
+
+div#services {
+  background-color: white;
+  height: 300px;
+  width: 100%;
+  margin-top: -5%;
+}
