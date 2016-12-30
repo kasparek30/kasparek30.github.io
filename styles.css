@@ -12,6 +12,15 @@ div#page-wrap {
   width: 100%;
 }
 
+h1.div-titles {
+  font-size: 24px;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
+  padding-bottom: 3%;
+  text-align: center;
+}
+
 div#header {
   width: 100%;
   height: 100%;
@@ -81,14 +90,6 @@ div#pnt-details {
   height: 100%;
   background-color: #F5F5F5;
   }
-  div#pnt-details h1 {
-    font-size: 24px;
-    color: black;
-    font-style: italic;
-    font-weight: bold;
-    padding-bottom: 3%;
-    text-align: center;
-    }
   div#pnt-details h2 {
     padding-left: 10%;
     font-size: 16px;
@@ -115,7 +116,7 @@ div#alumni {
   background-color: white;
   text-align: center;
   }
-  div#alumni h1 {
+  div#alumni h2 {
     font-size: 98px;
     font-weight: bold;
     -webkit-text-fill-color: #009688; /* Will override color (regardless of order) */
@@ -123,22 +124,13 @@ div#alumni {
     -webkit-text-stroke-color: white;
     margin-bottom: 5px;
   }
-  div#alumni h2 {
+  div#alumni h3 {
     font-size: 16px;
     text-shadow: 2px 2px 2px black;
     color: white;
     font-weight: bold;
     -webkit-text-stroke-width: .5px;
     -webkit-text-stroke-color: #009688;
-  }
-  div#alumni h4 {
-    font-size: 24px;
-    color: black;
-    font-style: italic;
-    font-weight: bold;
-    padding-bottom: 5px;
-    text-align: center;
-    padding-bottom: 3%;
   }
   div#alumni div#col1 {
     height: 200px; width: 200px;
@@ -174,7 +166,7 @@ div#alumni {
       position: relative;
       display: inline-block;
       }
-      div#alumni div#col2 h1 {
+      div#alumni div#col2 h2 {
       color: black;
       -webkit-text-fill-color: #009688; /* Will override color (regardless of order) */
       -webkit-text-stroke-width: 2px;
@@ -209,7 +201,7 @@ div#alumni {
       position: relative;
       display: inline-block;
       }
-      div#alumni div#col3 h1 {
+      div#alumni div#col3 h2 {
       color: black;
       -webkit-text-fill-color: #009688; /* Will override color (regardless of order) */
       -webkit-text-stroke-width: 2px;
@@ -247,7 +239,7 @@ div#alumni {
     }
     div#alumni div#container div.photobanner {
 	    height: 180px;
-	    width: 3000px;
+	    width: 2750px;
     }
     div#alumni div.photobanner img {
 	-webkit-transition: all 0.5s ease;
@@ -264,7 +256,6 @@ div#alumni div.photobanner img:hover {
 	-ms-transform: scale(1.1);
 	transform: scale(1.1);
 	cursor: pointer;
-
 	-webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
 	box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
@@ -330,24 +321,17 @@ div#alumni div.photobanner img:hover {
 
 div#pnt-events {
   padding: 2% 5% 5% 5%;
-  height: 100%;
+  height: auto;
   background-color: #F5F5F5;
-  }
-  div#pnt-events h1 {
-    font-size: 24px;
-    color: black;
-    font-style: italic;
-    font-weight: bold;
-    padding-bottom: 5px;
-    text-align: center;
   }
   div#pnt-events h2 {
     font-size: 16px;
     font-weight: normal;
     text-align: center;
+    margin-top: -25px;
   }
   div#pnt-events div#event-logos {
-    padding: 5px 30px 5px 30px;
+    padding: 5px 30px 40px 30px;
     }
     div#pnt-events div#event-logos img#img1 {
       height: 75px;
@@ -363,10 +347,14 @@ div#pnt-events {
     }
 
 div#pnt-subscribe {
-  padding: 5% 2% 5% 2%;
-  height: 100%;
+  padding: 2% 0 5% 0;
+  height: inherit;
   background-color: white;
   text-align: center;
+  background-image: url("images/pnt-pitcher.png");
+  background-repeat: no-repeat;
+  background-position: 125% 80%;
+  background-attachment: fixed;
   }
   div#pnt-subscribe h1 {
     font-size: 24px;
@@ -375,6 +363,7 @@ div#pnt-subscribe {
     font-weight: bold;
     padding-bottom: 5px;
     text-align: center;
+    display: inline-block;
   }
   div#pnt-subscribe h1#alt{
     font-size: 24px;
@@ -383,17 +372,118 @@ div#pnt-subscribe {
     font-weight: bold;
     padding-bottom: 5px;
     text-align: center;
+    display: inline-block;
+    padding-bottom: 15px;
   }
   div#pnt-subscribe h2 {
     font-size: 16px;
     font-weight: normal;
-    padding: 0 30px 5px 30px;
+    padding: 0 5px 5px 5px;
     line-height: 150%;
   }
   div#pnt-subscribe div#left-col {
-    float: left;
-    width: 55%;
+    width: 50%;
+    display: inline-block;
   }
   div#pnt-subscribe div#right-col {
-    float: right;
+    display: inline-block;
+    width: 50%;
+    padding-top: 50px;
+    }
+    div#pnt-subscribe div#right-col input{
+      width: 50%; height: 34px;
+      min-width: 105px;
+      padding-left: 5px;
+      background-color: #fff;
+      color: #000;
+      border: 0.0625rem solid rgba(0,0,0,0.2);
+      border-radius: .125rem;
+      transition: all .12s linear;
+      display: inline-block;
+    }
+    div#pnt-subscribe div#right-col button {
+      position: relative;
+      padding: 10px 30px 10px 30px;
+      background: rgba(98,54,255,0.05);
+      color: #B7112E;
+      border: 1px solid #B7112E;
+      border-radius: .125rem;
+      box-shadow: 0 1px 1px 0 rgba(19,10,51,0.05);
+      transition: all 0.25s
+    }
+    div#pnt-subscribe div#right-col img {
+      width: 10%;
+      min-width: 50px;
+      padding: 15px 10px 5px 10px;
+    }
+
+div#become-a-prospect {
+  padding: 2% 5% 5% 5%;
+  height: 100%;
+  background-color: #F5F5F5;
   }
+
+/* Mobile styles */
+
+@media only screen and (max-device-width: 667px) {
+/* Top Header Bar Styling */
+  div#header div#header-nav {
+    box-shadow: 0px 10px 20px grey;
+    background-color: white;
+    position: fixed;
+    z-index: 10;
+    font-size: 32px;
+  }
+  ul#nav-links {
+    background: url("images/pnt-logo.jpg") no-repeat;
+    background-color: white;
+    background-size: contain;
+    height: 100px;
+    list-style-type: none;
+    padding-left: 225px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: inline-block;
+    width: 1250px;
+    }
+    ul#nav-links li a {
+      color: #B7112E;
+      font-weight: bold;
+      padding: 35px 20px 10px 20px;
+      text-decoration: none;
+    }
+
+  div#header {
+    padding-bottom: 50px;
+    }
+
+    div#header-text {
+      text-align: center;
+      font-family: Helvetica, sans-serif;
+      color: #F5F5F5;
+      padding: 75px 0 0 15px;
+      }
+      div#header-text h1 {
+        font-size: 50px;
+        font-weight: bolder;
+      }
+      div#header-text h2 {
+        font-size: 28px;
+        font-weight: normal;
+        line-height: 150%;
+      }
+      a#learn-more {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        font-size: 14px;
+        color: white;
+        background-color: #B7112E;
+        width: 230px;
+        padding: 10px;
+        margin: 0 auto;
+        position: static;
+        margin-bottom: 15px;
+        margin-top: 5%;
+      }
+}
