@@ -9,7 +9,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="javascript/script.js"></script>
 </head>
 <body>
 
@@ -55,7 +54,7 @@
     <div id="col1">
     <div id="bg-col1"></div>
     <div id="stats-col1">
-      <h2>85%</h2><br>
+      <h2>85%</h2>
       <h3>of our players receive a college scholarship offer</h3>
     </div><!--end stats-col1-->
     </div><!--end col1-->
@@ -122,9 +121,9 @@
         Also, follow us on social media for instant updates, our latest college commitments, &amp; our schedule!<h2>
     </div><!--end left-col-->
     <div id="right-col">
-      <input type="text" placeholder="Email Address" id="email"><button onclick="emailSignUp()">Subscribe</button>
+      <input type="text" placeholder="Email Address" id="email"><button id="subscribe">Subscribe</button>
       <br>
-      <img src="images/twitter-logo.png" id="twitter"><img src="images/facebook-logo.png" id="facebook">
+      <a href="#pnt-subscribe-anchor" onclick="window.open( 'https://twitter.com/ProspectsNT', 'name', 'location=no,scrollbars=yes,status=no,toolbar=yes,resizable=yes' )"><img src="images/twitter-logo.png" id="twitter"></a><img src="images/facebook-logo.png" id="facebook">
     </div><!--end right-col-->
   </div><!--end pnt-subscribe-->
 
@@ -147,9 +146,15 @@
   </div><!--end become-a-prospect-->
 
   <div id="footer">
-    &copy; 2017 Prospects National Team. Designed &amp; Developed by <img src="/Users/kkasparek/Desktop/Projects/reflexionmedia.png" width="150px">
+    <br>
+    &copy; 2017 Batter-Up, LLC. All Rights Reserved.
+    <br>
+    Designed &amp; Developed by <a href="#">REFLEKTmedia</a>
   </div><!--end footer-->
 </div><!--end page-wrap-->
+
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script src="javascript/script.js"></script>
 
 </body>
 </html>

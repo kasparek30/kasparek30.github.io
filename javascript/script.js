@@ -1,4 +1,5 @@
 
+// Handles the smooth scrolling of the anchor links
 $(document).ready(function(){
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
@@ -24,17 +25,47 @@ $(document).ready(function(){
   });
 });
 
-function emailSignUp() {
-  var text = document.getElementById('email').value;
-  alert('The following email has been added to our newsletter: ' + text);
-}
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyDywfhkPZX6fy77HBK5uv0t3bHVHW5-qVY",
+  authDomain: "prospectsnationalteam.firebaseapp.com",
+  databaseURL: "https://prospectsnationalteam.firebaseio.com",
+  storageBucket: "prospectsnationalteam.appspot.com",
+  messagingSenderId: "880000554288"
+};
+firebase.initializeApp(config);
 
+// Handles the email subscribe info
+var database = firebase.database();
+var subscribe = document.getElementById('subscribe');
+
+subscribe.addEventListener('click', function(e) {
+
+  // Get email address
+  var email = document.getElementById('email').value;
+
+  // Create a storage ref
+  var date = Date();
+  var emailRef = firebase.database().ref().child('Email List/' + date);
+
+    if (email === '') {
+      alert('Please enter your email address!');
+    } else if (emailRef.set(email)) {
+      alert(email + ' has been added to our newsletter!');
+      document.getElementById('email').value = '';
+    } else {
+      alert("An error has occured! You're email has NOT been added to our newsletter.");
+    }
+});
+
+// Handles the submission of the become-a-prospect fields
 function bapForm() {
-  alert('Please verify that the following information is correct before submitting!');
+  confirm('Please verify that the following information is correct before submitting!');
 }
 
-var amountScrolled = 250;
 
+// Handles the show/hide 'back-to-top' button'
+var amountScrolled = 250;
 $(window).scroll(function() {
 	if ( $(window).scrollTop() > amountScrolled ) {
 		$('a.back-to-top').fadeIn('slow');
@@ -43,6 +74,7 @@ $(window).scroll(function() {
 	}
 });
 
+// Handles the scrolling of the 'back-to-top' button
 $(document).ready(function(){
   // Add smooth scrolling to all links
   $("a.back-to-top").on('click', function(event) {
