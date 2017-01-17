@@ -6,42 +6,80 @@
     Prospects National Team
   </title>
   <link rel="stylesheet" href="styles.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
 <body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <p>Upcoming Events:</p>
+
+    <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="images/pg-mlk.jpeg" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="img_fjords_wide.jpg" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="img_mountains_wide.jpg" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+  </div>
+
+  <a href="javascript:void(0)" id="calendar" onclick="openNav()">Calendar</a>
 
   <a href="#" class="back-to-top">Back to Top</a>
 
   <div id="page-wrap">
     <div id="header">
       <div id="header-nav">
-      <ul id="nav-links">
-        <li><a href="#learn-more">Prospects National Team</a></li>
-        <li><a href="#alumni-anchor">Alumni</a></li>
-        <li><a href="#pnt-events-anchor">Events</a></li>
-        <li><a href="#become-a-prospect">Become A Prospect</a></li>
-        <li><a href="#pnt-subscribe-anchor">Follow Us</a></li>
-      </ul><!--end nav-links-->
-    </div><!--end header-nav-->
+        <ul id="nav-links">
+          <li><a href="#learn-more">Prospects National Team</a></li>
+          <li><a href="#alumni-anchor">Alumni</a></li>
+          <li><a href="#pnt-events-anchor">Events</a></li>
+          <li><a href="#become-a-prospect">Become A Prospect</a></li>
+          <li><a href="#pnt-subscribe-anchor">Follow Us</a></li>
+        </ul><!--end nav-links-->
+        <a onclick="window.open( 'https://gc.com/t/winter-2016/prospects-national-team-5878175c992ced0001288c73', 'name', 'location=no,scrollbars=yes,status=no,toolbar=yes,resizable=yes' )"><img src="images/gc-logo.png"></a>
+      </div><!--end header-nav-->
       <div id="header-text">
         <br>
         <br>
         <br>
         <h1>THE NEXT LEVEL IS CLOSER THAN YOU THINK.</h1>
         <br>
-        <h2>Prospects National Team helps amateur ballplayers get exposure to Major League scouts &amp; Collegiate recruiters.</h2>
+        <h2>Prospects National Team helps amateur ballplayers get exposure to Major League scouts &amp; College recruiters.</h2>
         <br>
         <img src="images/P-logo.png" height="275px">
         <a href="#learn-more" id="learn-more">LEARN MORE ABOUT PNT</a>
       </div><!--end header-text-->
-  </div><!--end header-->
+    </div><!--end header-->
 
   <div id="pnt-details">
     <h1 class="div-titles">Prospects National Team - <div class="alt">Trevor Sanford, Head of Player Development</div></h1>
     <div id="pnt-trevor"><img src="images/coachtrev.jpeg"></div>
-    <h2>We recruit top, amateur talent to compete in highly competitive tournaments across the country.
+    <h2 class="div-text">We recruit top, amateur talent to compete in highly competitive tournaments across the country.
       Our goal is to give talented ballplayers the opportunity to play in front of Major League Baseball scouts and Collegiate recruiters.
       With the hopes that all of our players receive a college scholarship, and/or a phone call on draft day, we also work to prepare them for the next level.
       Our coaching staff has either played at the NCAA D1 level, all levels of the Minor Leagues, and/or the Major Leagues!
@@ -54,7 +92,7 @@
     <div id="col1">
     <div id="bg-col1"></div>
     <div id="stats-col1">
-      <h2>85%</h2>
+      <h2>85%</h2><br>
       <h3>of our players receive a college scholarship offer</h3>
     </div><!--end stats-col1-->
     </div><!--end col1-->
@@ -62,16 +100,14 @@
     <div id="bg-col2"></div>
     <div id="stats-col2">
       <h2>32</h2><br>
-      <h3>players &amp; staff members have<br>
-        been selected in the MLB Draft</h3>
+      <h3>players &amp; staff members have been selected in the MLB Draft</h3>
     </div><!--end stats-col2-->
   </div><!--end col2-->
   <div id="col3">
   <div id="bg-col3"></div>
     <div id="stats-col3">
       <h2>2</h2><br>
-      <h3>players or staff members<br>
-        have worn an MLB uniform</h3>
+      <h3>players or staff members have worn an MLB uniform</h3>
     </div><!--end stats-col3-->
   </div><!--end col3-->
   <div style="clear:both;"></div>
@@ -140,7 +176,7 @@
       <input type="text" placeholder="Contant Phone Number">
       <input type="text" placeholder="Email Address">
       <input type="text" placeholder="Home City, State">
-      <input type="text" placeholder="High School">
+      <input type="text" placeholder="High School"><br>
       <button onclick="bapForm()">Send</button>
     </div><!--end right-col-bap-->
   </div><!--end become-a-prospect-->
@@ -149,12 +185,28 @@
     <br>
     &copy; 2017 Batter-Up, LLC. All Rights Reserved.
     <br>
-    Designed &amp; Developed by <a href="#">REFLEKTmedia</a>
+    Designed &amp; Developed by
+    <br>
+    <a href="#"><img src="/Users/kkasparek/Dropbox/reflexmedia-white.png" style="height:35px"></a>
+    <br>
   </div><!--end footer-->
 </div><!--end page-wrap-->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
 <script src="javascript/script.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90548701-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 </body>
 </html>

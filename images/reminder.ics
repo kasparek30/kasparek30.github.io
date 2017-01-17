@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+PRODID:-//Lynda.com//Reminder//EN
+VERSION:2.0
+BEGIN:VEVENT
+UID:reminder-91257-1484671984620@lynda.com
+DTSTAMP:1484671984620
+DTSTART:20170118T090000
+DTEND:20170118T093000
+SUMMARY:Today's Learning Plan
+DESCRIPTION:Hello Ben! Learn something new today, and continue your courses at: https://www.lynda.com?utm_campaign=reminders
+LOCATION:Lynda.com
+RRULE:FREQ=WEEKLY;WKST=SU;BYDAY=SU,MO,TU,WE,TH,FR,SA
+END:VEVENT
+END:VCALENDAR
