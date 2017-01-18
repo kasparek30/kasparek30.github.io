@@ -317,6 +317,8 @@ div#pnt-details {
     text-justify: inter-word;
     }
   div#pnt-trevor {
+    background: url('images/coachtrev.jpeg') no-repeat;
+    background-size: cover;
     float: right;
     height: 115px;
     width: 115px;
@@ -764,6 +766,36 @@ div#footer {
 /* Mobile styles */
 @media only screen and (max-device-width: 667px) {
 
+a#calendar {
+  position: fixed;
+  top: 30%;
+  left: 0%;
+  z-index: 990;
+  border-radius: 0 10px 10px 0;
+  background: #B7112E url("images/calendar.png") no-repeat center;
+  background-size: contain;
+  width: 100px;
+  height: 80px;
+  box-shadow: 0px 10px 20px grey;
+  /*border: 1px solid #B5BFBF;*/
+  border-left: none;
+  text-indent: -9999px;
+  }
+  a#calendar:hover {
+    background: #212121 url("images/calendar.png") no-repeat center;
+    background-size: contain;
+    width: 110px;
+    height: 80px;
+    background-position: 70% 50%;
+    /*border: 1px solid #B7112E;*/
+    border-left: none;
+  }
+
+.sidenav {
+  height: auto;
+  margin-top: 105px;
+  }
+
 /* Top Header Bar Styling */
   div#header div#header-nav {
     box-shadow: 0px 10px 20px grey;
@@ -780,10 +812,11 @@ div#footer {
   ul#nav-links {
     background: url("images/pnt-logo.jpg") no-repeat;
     background-color: white;
-    background-size: contain;
+    background-size: 425px;
+    background-position: -10px -45px;
     height: 100px;
     list-style-type: none;
-    padding-left: 225px;
+    padding-left: 400px;
     overflow-x: scroll;
     overflow-y: hidden;
     display: inline-block;
@@ -794,13 +827,6 @@ div#footer {
       font-weight: bold;
       padding: 35px 20px 10px 20px;
       text-decoration: none;
-    }
-
-    div#calendar {
-
-    }
-
-    div#mySidenav {
     }
 
   div#header {
@@ -814,13 +840,14 @@ div#footer {
       padding: 75px 0 0 15px;
       }
       div#header-text h1 {
-        font-size: 50px;
+        font-size: 60px;
         font-weight: bolder;
       }
       div#header-text h2 {
-        font-size: 32px;
+        font-size: 34px;
         font-weight: normal;
         line-height: 150%;
+        padding: 5px 15px 0 0;;
       }
       a#learn-more {
         display: block;
@@ -837,13 +864,26 @@ div#footer {
         margin-top: 5%;
       }
 
-h1.div-titles {
-  font-size: 25px;
+div#pnt-details h1 {
+  font-size: 40px;
 }
 
 div#pnt-details h2 {
-  font-size: 24px;
+  font-size: 32px;
   padding-bottom: 50px;
+}
+
+div#pnt-trevor {
+  background: url('images/coachtrev.jpeg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 225px;
+  width: 225px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-top: 5px;
+  box-shadow: 0px 10px 10px grey;
+  margin: -5px 10% 5px 25px;
 }
 
 div#alumni-anchor {
@@ -882,6 +922,10 @@ div#alumni h1 {
     margin: 50px auto;
     background: white;
   }
+  div#alumni div#container header h1 {
+    font-size: 50px;
+    padding-top: 50px;
+  }
   div#alumni div#container div.photobanner {
     height: 360px;
     width: 5500px;
@@ -900,11 +944,11 @@ div#pnt-events-anchor {
 }
 
 div#pnt-events h1 {
-  font-size: 24px;
+  font-size: 34px;
   padding-top: 25px;
   }
   div#pnt-events h2 {
-    font-size: 13px;
+    font-size: 14px;
   }
 
 div#pnt-subscribe {
