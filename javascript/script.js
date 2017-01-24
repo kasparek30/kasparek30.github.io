@@ -1,4 +1,31 @@
 
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
 // Handles the smooth scrolling of the anchor links
 $(document).ready(function(){
   // Add smooth scrolling to all links
@@ -35,32 +62,6 @@ function closeNav() {
   document.getElementById("calendar").style.display = "";
 }
 
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
 
 // Initialize Firebase
 var config = {
@@ -97,7 +98,32 @@ subscribe.addEventListener('click', function(e) {
 
 // Handles the submission of the become-a-prospect fields
 function bapForm() {
-  confirm('Please verify that the following information is correct before submitting!');
+  // Handles the form
+  var parentName = document.getElementById('parentname').value;
+  var playerName = document.getElementById('playername').value;
+  var phone = document.getElementById('phone').value;
+  var emailAddress = document.getElementById('emailaddress').value;
+  var cityState = document.getElementById('citystate').value;
+  var highSchool = document.getElementById('highschool').value;
+
+  var formRef = firebase.database().ref().child('Form Submission/' + parentName);
+  var playerRef = firebase.database().ref().child('Form Submission/' + parentName + '/' + 'Player Name');
+  var phoneRef = firebase.database().ref().child('Form Submission/' + parentName + '/' + 'Phone Number');
+  var emailAddressRef = firebase.database().ref().child('Form Submission/' + parentName + '/' + 'Email Address');
+  var cityStateRef = firebase.database().ref().child('Form Submission/' + parentName + '/' + 'City, State');
+  var highSchoolRef = firebase.database().ref().child('Form Submission/' + parentName + '/' + 'High School');
+
+  if (parentName | playerName |  phone | emailAddress | cityState | highSchool === '') {
+    alert('All field are required!');
+  } else if (formRef.set(parentName) && playerRef.set(playerName) && phoneRef.set(phone) && emailAddressRef.set(emailAddress) && cityStateRef.set(cityState) && highSchoolRef.set(highSchool)){
+    confirm('Please verify that the following information is correct before submitting! ' + parentName + '' + playerName);
+    document.getElementById('parentname').value = '';
+    document.getElementById('playername').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('emailaddress').value = '';
+    document.getElementById('citystate').value = '';
+    document.getElementById('highschool').value = '';
+  }
 }
 
 
